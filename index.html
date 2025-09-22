@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Findify - Lost & Found Portal</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Findify</h1>
+    <p>College Lost & Found Portal</p>
+  </header>
+
+  <main>
+    <!-- Report Form -->
+    <section class="report-section">
+      <h2>Submit a Lost / Found Report</h2>
+      <form id="reportForm">
+        <label>Type:
+          <select id="type">
+            <option value="Lost">Lost</option>
+            <option value="Found">Found</option>
+          </select>
+        </label>
+
+        <label>Item Type:
+          <input type="text" id="itemType" placeholder="e.g. Mobile, Wallet, ID Card" required>
+        </label>
+
+        <label>Description:
+          <textarea id="description" placeholder="Color, brand, special marks..." required></textarea>
+        </label>
+
+        <label>Date & Time:
+          <input type="datetime-local" id="dateTime" required>
+        </label>
+
+        <label>Location:
+          <input type="text" id="location" placeholder="e.g. Library, C-Block" required>
+        </label>
+
+        <label>Upload Image:
+          <input type="file" id="image">
+        </label>
+
+        <label>Contact Information:
+          <input type="text" id="contact" placeholder="Phone or Email" required>
+        </label>
+
+        <button type="submit">Submit Report</button>
+      </form>
+
+      <!-- Success Message -->
+      <p id="successMsg" class="hidden">✅ Report submitted successfully!</p>
+    </section>
+
+    <!-- Submitted Reports -->
+    <section class="reports-section">
+      <h2>Submitted Reports</h2>
+      <div id="reportsList">No reports yet.</div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Findify - College Lost & Found Portal</p>
+  </footer>
+</body>
+</html>
